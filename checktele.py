@@ -234,9 +234,9 @@ async def _(event):
             if "Available" in isav:
                 await asyncio.sleep(1)
                 try:
-                    await StrPython(functions.account.UpdateUsernameRequest(username=username))           
-                        
-                    await StrPython.send_file(event.chat_id, "https://t.me/R_M_T/36",caption=f'''
+                    await sython(functions.channels.UpdateUsernameRequest(
+                        channel=ch, username=username))
+                    await event.client.send_message(event.chat_id, f'''
 Caught by a sheikh 💸
 ⤷ ID : @{username}
 ⌯ Clicks ⤷ : {trys}
